@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "rm -rf dist && parcel build --no-cache src/index.html && npm run copy-on-build",
+    "dev": "rm -rf dist && parcel build --no-cache --no-optimize src/index.html && npm run copy-on-build && http-server dist/",
+    "copy-on-build": "for file in $(cat .local/copy-on-build.txt | sed 's/\\W$//g'); do cp \"src/$file\" dist/; done"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "parcel": "^2.12.0",
+    "parcel-optimizer-friendly-urls": "^0.2.0",
+    "postcss": "^8.4.38",
+    "posthtml-component": "^1.1.1",
+    "tailwindcss": "^3.4.1"
+  }
+}

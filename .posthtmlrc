@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "posthtml-component": {
+      root: './src',
+      folders: ['layouts', 'components']
+    }
+  }
+}

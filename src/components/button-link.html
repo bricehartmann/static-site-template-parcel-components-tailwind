@@ -1,3 +1,32 @@
-<a class="px-2 py-1">
+<script props>
+    let paddingClasses, fontClasses, colorClasses;
+
+    if (props.size === 'sm') {
+        paddingClasses = 'px-2 py-1';
+        fontClasses = 'text-sm';
+    } else if (props.size === 'lg') {
+        paddingClasses = 'px-4 py-3';
+        fontClasses = 'text-lg font-semibold';
+    } else {
+        paddingClasses = 'px-3 py-2';
+        fontClasses = 'text-base font-medium'
+    }
+
+    if (props.type === 'secondary') {
+        colorClasses = 'text-white bg-gray-500 hover:bg-gray-300';
+    } else if (props.type === 'tertiary') {
+        colorClasses = 'text-white bg-indigo-500 hover:bg-indigo-300';
+    } else {
+        colorClasses = 'text-white bg-blue-500 hover:bg-blue-300';
+    }
+
+    module.exports = {
+        paddingClasses,
+        fontClasses,
+        colorClasses,
+    }
+</script>
+
+<a class="inline-block {{paddingClasses}} {{fontClasses}} {{colorClasses}}">
     <yield></yield>
 </a>

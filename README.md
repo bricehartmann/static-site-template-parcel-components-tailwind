@@ -18,7 +18,7 @@ This repository is a template for a static site using Parcel 2, PostHTML Compone
 
 ### Local development
 After changes, build the project and run a local HTTP server using:
-```
+```bash
 npm run dev
 ```
 Use Ctrl-C to exit the server.
@@ -27,7 +27,7 @@ Development mode does **NOT** optimize/minify files or bust the browser cache.
 
 ### Production
 Build the project for production using:
-```
+```bash
 npm run build
 ```
 This will output the resulting files to the `dist/` directory.
